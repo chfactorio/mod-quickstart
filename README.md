@@ -4,6 +4,10 @@ Currently targetting Factorio 0.15.5.
 
 Provides a quick boost to starting resources to avoid early manual labour.
 
+Version | Download Link
+------------ | -------------
+1.0.0 | https://github.com/chfactorio/mod-quickstart/releases/download/v1.0.0/Quick.Start_1.0.0.zip
+
 ## Building
 
 This module uses the gradle build tool to package the various LUA scripts and data. You can use the supplied

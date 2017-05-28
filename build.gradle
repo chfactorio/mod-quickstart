@@ -79,8 +79,8 @@ task installWindows {
 
 		// Installs the distribution archive to the user's mod directory
 		task(installModule, type: Copy) {
-    		from new File(distsDir, fullNameZip)
-    		destinationDir factorioModDir
+			from new File(distsDir, fullNameZip)
+			destinationDir factorioModDir
 		}.execute()
 
 		println 'Installed module to: ' + new File(factorioModDir, fullNameZip)
