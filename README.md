@@ -52,8 +52,9 @@ Listed below are any tasks that have been completed, or remain to be completed, 
 
 ## Building
 
-This module uses the gradle build tool to package the various LUA scripts and data. You can use the supplied
-gradlew and gradlew.sh commands to perform various build tasks.
+This module uses the Gradle build tool (http://www.gradle.org) to package the module content. You can use the supplied
+gradlew and gradlew.sh commands to perform various build tasks. This will require a JDK installed and available on the path,
+though that should be the only requirement. The script will download and install the relevant version of Gradle.
 
 To perform a full build:
 
@@ -69,4 +70,10 @@ $ gradlew clean build dist installWindows
 
 ## Change Log
 
-To do.
+### 1.0.1
+
+* Fixed issue with space in the module name.
+
+### 1.0.0
+
+* Initial release.
