@@ -35,8 +35,7 @@ submachine-gun | 1
 
 Version			| Factorio Version	| Download Link
 ------------	| ----------------	| -------------
-1.0.1			| 0.15+				| https://github.com/chfactorio/mod-quickstart/releases/download/v1.0.1/Quick.Start_1.0.1.zip
-1.0.0			| 0.15+				| https://github.com/chfactorio/mod-quickstart/releases/download/v1.0.0/Quick.Start_1.0.0.zip
+1.0.1			| 0.15+				| https://github.com/chfactorio/mod-quickstart/releases/download/v1.0.1/QuickStart_1.0.1.zip
 
 To manually install, copy the above file to your %APPDATA%\Factorio\mods folder, or the corresponding location on Linux/Mac. You
 can type %APPDATA% into an Explorer window to navigate to the relevant folder.
