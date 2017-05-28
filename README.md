@@ -4,9 +4,19 @@ Currently targetting Factorio 0.15.5.
 
 Provides a quick boost to starting resources to avoid early manual labour.
 
-Version | Download Link
+Version      | Download Link
 ------------ | -------------
-1.0.0 | https://github.com/chfactorio/mod-quickstart/releases/download/v1.0.0/Quick.Start_1.0.0.zip
+1.0.0        | https://github.com/chfactorio/mod-quickstart/releases/download/v1.0.0/Quick.Start_1.0.0.zip
+
+## Tasks
+
+Listed below are any tasks that have been completed, or remain to be completed, before a stable version is released:
+
+- [x] Initial proof-of-concept and basic build script.
+- [ ] Fix build script for Linux.
+- [ ] Allow configuration of the module in-game.
+- [ ] Allow publishing to an online repository for ease of use.
+- [ ] Provide locale-specific support.
 
 ## Building
 
@@ -24,13 +34,3 @@ To perform a full build, and install the built archive (only on Windows currentl
 ```
 $ gradlew clean build dist installWindows
 ```
-
-## Tasks
-
-Listed below are any tasks that have been completed, or remain to be completed, before a stable version is released:
-
-- [x] Initial proof-of-concept and basic build script.
-- [ ] Fix build script for Linux.
-- [ ] Allow configuration of the module in-game.
-- [ ] Allow publishing to an online repository for ease of use.
-- [ ] Provide locale-specific support.
