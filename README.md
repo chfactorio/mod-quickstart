@@ -1,12 +1,41 @@
 # Factorio Quick Start Module
 
-Currently targetting Factorio 0.15.5.
-
 Provides a quick boost to starting resources to avoid early manual labour.
 
-Version      | Download Link
------------- | -------------
-1.0.0        | https://github.com/chfactorio/mod-quickstart/releases/download/v1.0.0/Quick.Start_1.0.0.zip
+Currently targetting Factorio 0.15.16 (but may work on any 0.15 version). Should be reasonably fail-safe
+in the event that any items added don't exist, so should co-exist with most/all mods.
+
+In lieu of configuration or profiles at this stage, it adds:
+
+Item | Quantity
+---- | --------
+transport-belt | 100
+pipe | 100
+pipe-to-ground | 50
+inserter | 50
+wooden-chest | 10
+iron-chest | 10
+lab | 1
+offshore-pump | 2
+steam-engine | 20
+electric-mining-drill | 4
+stone-furnace | 8
+assembling-machine-1 | 2
+coal | 400
+raw-wood | 400
+iron-plate | 392
+copper-plate | 400
+steel-plate | 200
+stone | 400
+steel-axe | 5
+heavy-armor | 1
+submachine-gun | 1
+
+## Releases
+
+Version      | Factorio Version | Download Link
+------------ | ---------------- | -------------
+1.0.0        | 0.15+            | https://github.com/chfactorio/mod-quickstart/releases/download/v1.0.0/Quick.Start_1.0.0.zip
 
 ## Tasks
 
