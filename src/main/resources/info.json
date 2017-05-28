@@ -1,0 +1,12 @@
+
+{
+  "name": "@application.name@",
+  "version": "@application.version@",
+  "factorio_version": "0.15",
+  "title": "@application.name@",
+  "author": "@application.vendor@",
+  "contact": "@application.contact@",
+  "homepage": "@application.url@",
+  "description": "@application.description@",
+  "dependencies": ["base >= 0.15.0"]
+}

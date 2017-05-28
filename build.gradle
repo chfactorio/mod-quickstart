@@ -1,0 +1,88 @@
+//==============================================================================
+// Gradle Wrapper Task
+//==============================================================================
+
+task wrapper(type: Wrapper) {
+	gradleVersion = '3.5'
+}
+
+//==============================================================================
+// Plugins and Imports
+//==============================================================================
+
+apply plugin: 'java'
+
+import org.apache.tools.ant.filters.*
+
+//==============================================================================
+// Repositories
+//==============================================================================
+
+repositories {
+	mavenCentral()
+}
+
+//==============================================================================
+// Build Settings
+//==============================================================================
+
+version = project.property('application.version')
+
+//==============================================================================
+// Build Tasks
+//==============================================================================
+
+processResources {
+
+	filesMatching(['**/*.lua', '**/*.json']) {
+		filter ReplaceTokens, tokens: [
+			'application.name': project.property('application.name'),
+			'application.vendor': project.property('application.vendor'),
+			'application.version': project.property('application.version'),
+		]
+	}
+}
+
+task dist {
+
+	doLast {
+
+		// Modules need to follow a particular naming convention based on their
+		// internal name and version e.g. MOD_NAME_x.y.z.zip
+		def fullName = project.property('application.name') + '_' + project.version
+		def fullNameZip = fullName + '.zip'
+		
+		// Archives resources from src/main/resources that have been processed and
+		// copied to the build directory.
+		task(resourcesArchive, type: Zip) {
+			archiveName fullNameZip
+			from (sourceSets.main.output.resourcesDir)
+			include '*.lua', '*.json'
+			into fullName // path within archive
+			destinationDir distsDir // output directory of archive (build/distributions)
+		}.execute()
+
+		println 'Created distribution archive: ' + new File(distsDir, fullNameZip)
+	}
+}
+
+task installWindows {
+
+	doLast {
+		
+		// Use the default Windows game data location. Needs cleaning up to allow for
+		// Linux and/or overriding a property in local.properties.
+		def fullName = project.property('application.name') + '_' + project.version
+		def fullNameZip = fullName + '.zip'
+		def factorioDir = new File("$System.env.APPDATA", 'Factorio')
+		def factorioModDir = new File(factorioDir, 'mods')
+
+		// Installs the distribution archive to the user's mod directory
+		task(installModule, type: Copy) {
+    		from new File(distsDir, fullNameZip)
+    		destinationDir factorioModDir
+		}.execute()
+
+		println 'Installed module to: ' + new File(factorioModDir, fullNameZip)
+	}
+}
