@@ -1,4 +1,4 @@
-# Factorio Quick Start Module
+# Factorio QuickStart Module
 
 Provides a quick boost to starting resources to avoid early manual labour.
 
@@ -33,9 +33,13 @@ submachine-gun | 1
 
 ## Releases
 
-Version      | Factorio Version | Download Link
------------- | ---------------- | -------------
-1.0.0        | 0.15+            | https://github.com/chfactorio/mod-quickstart/releases/download/v1.0.0/Quick.Start_1.0.0.zip
+Version			| Factorio Version	| Download Link
+------------	| ----------------	| -------------
+1.0.1			| 0.15+				| https://github.com/chfactorio/mod-quickstart/releases/download/v1.0.1/Quick.Start_1.0.1.zip
+1.0.0			| 0.15+				| https://github.com/chfactorio/mod-quickstart/releases/download/v1.0.0/Quick.Start_1.0.0.zip
+
+To manually install, copy the above file to your %APPDATA%\Factorio\mods folder, or the corresponding location on Linux/Mac. You
+can type %APPDATA% into an Explorer window to navigate to the relevant folder.
 
 ## Tasks
 
@@ -63,3 +67,7 @@ To perform a full build, and install the built archive (only on Windows currentl
 ```
 $ gradlew clean build dist installWindows
 ```
+
+## Change Log
+
+To do.
